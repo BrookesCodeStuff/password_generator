@@ -1,7 +1,23 @@
 // Assignment code here
+
 // Randomly choose a number based on length of passed variable
 var rand = function (howLong) {
   return Math.floor(Math.random() * howLong);
+};
+
+var passLength = function () {
+  var getLength = prompt(
+    'How long should the password be? Password should be between 8 and 128 characters.'
+  );
+
+  if (getLength < 8 || getLength > 128) {
+    alert(
+      getLength +
+        ' is an invalid choice. Password should be between 8 and 128 characters.'
+    );
+    passLength();
+  }
+  return getLength;
 };
 
 var generatePassword = function () {
@@ -10,7 +26,7 @@ var generatePassword = function () {
   var A = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   var n = '0123456789';
   var s = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
-  var passwordLength = 8;
+  var passwordLength = passLength();
   var passwordTypes = [a, A, n, s];
 
   // Loop until the password is as long as the user's choice

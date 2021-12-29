@@ -36,7 +36,7 @@ var getParams = function () {
       var getLength = prompt(
         'How long should the password be? Password should be between 8 and 128 characters.'
       );
-      // If the password doesn't meet the lenght requirements
+      // If the password doesn't meet the length requirements
       // or is blank or not a number, re-prompt
       if (getLength < 8 || getLength > 128 || !parseInt(getLength)) {
         alert(

@@ -1,1 +1,12 @@
-# Password Generator Starter Code
+# Password Generator
+
+## Description
+
+## Usage
+
+## Credits
+
+## Live Site
+
+## Screenshot
+

@@ -30,13 +30,12 @@ var getParams = function () {
         'How long should the password be? Password should be between 8 and 128 characters.'
       );
 
-      if (getLength < 8 || getLength > 128) {
+      if (getLength < 8 || getLength > 128 || !parseInt(getLength)) {
         alert(
-          getLength +
-            ' is an invalid choice. Password should be between 8 and 128 characters.'
+          'That is an invalid choice. Password should be a number between 8 and 128 characters.'
         );
       } else {
-        passParams.length = getLength;
+        passParams.length = parseInt(getLength);
       }
     } else if (passParams.types.length === 0) {
       for (var i in passTypes) {
